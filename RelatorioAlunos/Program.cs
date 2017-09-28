@@ -10,7 +10,10 @@ namespace RelatorioAlunos
     {
         static void Main(string[] args)
         {
-            Aluno[] alunos = new Aluno[3];
+            Console.Write("Quantos alunos? ");
+            int n = int.Parse(Console.ReadLine());
+
+            Aluno[] alunos = new Aluno[n];
 
             for (int i = 0; i < alunos.Length; i++)
             {
