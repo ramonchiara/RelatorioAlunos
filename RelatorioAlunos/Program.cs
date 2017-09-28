@@ -10,13 +10,11 @@ namespace RelatorioAlunos
     {
         static void Main(string[] args)
         {
-            Aluno[] alunos = new Aluno[20];
+            Aluno[] alunos = new Aluno[3];
 
             for (int i = 0; i < alunos.Length; i++)
             {
                 Console.WriteLine("Entre com os dados do aluno {0}", i);
-                Console.WriteLine();
-
                 Console.Write("Nome: ");
                 string nome = Console.ReadLine();
                 Console.Write("P1: ");
@@ -25,6 +23,8 @@ namespace RelatorioAlunos
                 double p2 = double.Parse(Console.ReadLine());
 
                 alunos[i] = new Aluno(nome, p1, p2);
+
+                Console.WriteLine();
             }
 
             Console.WriteLine();
