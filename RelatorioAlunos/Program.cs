@@ -10,22 +10,23 @@ namespace RelatorioAlunos
     {
         static void Main(string[] args)
         {
-            Console.Write("Quantos alunos? ");
-            int n = int.Parse(Console.ReadLine());
+            List<Aluno> alunos = new List<Aluno>();
 
-            Aluno[] alunos = new Aluno[n];
-
-            for (int i = 0; i < alunos.Length; i++)
+            while (true)
             {
-                Console.WriteLine("Entre com os dados do aluno {0}", i);
                 Console.Write("Nome: ");
                 string nome = Console.ReadLine();
+                if (nome == "")
+                {
+                    break;
+                }
                 Console.Write("P1: ");
                 double p1 = double.Parse(Console.ReadLine());
                 Console.Write("P2: ");
                 double p2 = double.Parse(Console.ReadLine());
 
-                alunos[i] = new Aluno(nome, p1, p2);
+                Aluno novo = new Aluno(nome, p1, p2);
+                alunos.Add(novo);
 
                 Console.WriteLine();
             }
